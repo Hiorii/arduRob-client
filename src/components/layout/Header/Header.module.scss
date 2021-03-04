@@ -1,0 +1,339 @@
+@import "../../../styles/settings";
+
+.root {
+  position: fixed;
+  height: 7rem;
+  width: 100%;
+  background: $primary;
+  z-index: 99;
+  transition: $main-transition;
+  .container {
+    @include flex(space-between, center);
+    margin: 0 2rem 2rem 2rem;
+    .burger {
+      display: none;
+    }
+    .logo {
+      margin-top: 1rem;
+      a {
+        @include flex(center,center);
+        text-decoration: none;
+        img {
+          height: 5rem;
+          width: 4.5rem;
+          margin-left: 1rem;
+        }
+        span {
+          font-size: 2.2rem;
+          color: $main-font;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .list {
+      margin-top: 1rem;
+      a {
+        text-decoration: none;
+        color: $main-font;
+        font-size: 1.8rem;
+        margin: 0 1rem;
+        transition: $main-transition;
+        &:hover {
+          color: $main-btn;
+        }
+      }
+      .active {
+        color: $main-btn;
+      }
+    }
+    .icons {
+      @include flex(center, center);
+      margin-top: 1rem;
+      position: relative;
+      .ico {
+        font-size: 2.3rem;
+        color: $main-font;
+        svg {
+          color: $main-font;
+          cursor: pointer;
+        }
+      }
+      .userActive {
+        display: none;
+      }
+      .user{
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        right: 3.4rem;
+        width: 15rem;
+        .userData {
+          width: 100%;
+          .loUser {
+            z-index: 999;
+            width: 100%;
+            border: 1px solid rgba(0,0,0,0.2);
+            background: $primary-white;
+            box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2), -7px 7px 10px rgba(0, 0, 0, 0.2);
+            .userCommon {
+              width: 100%;
+              font-size: 1.3rem;
+              border-bottom: 1px solid $main-btn;
+              padding: 1rem 0 .5rem .5rem;
+              font-weight: 800;
+              svg {
+                color: $main-btn;
+                font-size: 1.5rem;
+              }
+            }
+            p {
+              color: $second-font;
+              cursor: pointer;
+              font-size: 1.4rem;
+              transition: $main-transition;
+              margin-top: 1rem;
+              margin-left: 1rem;
+              &:hover {
+                color: $main-btn;
+              }
+            }
+            p:last-of-type {
+              margin-bottom: .5rem;
+            }
+            a {
+              text-decoration: none;
+              svg {
+                color: $second-font;
+                margin-right: 2rem;
+                font-size: 2.2rem;
+                transition: $main-transition;
+                &:hover {
+                  color: $main-btn;
+                }
+              }
+            }
+          }
+        }
+      }
+      .totalQuantity {
+        @include flex(center,center);
+        color: $main-font;
+        font-size: 1.2rem;
+        font-weight: 800;
+        background: $main-btn;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        position: absolute;
+        left: 3.7rem;
+        bottom: 2.1rem;
+      }
+    }
+  }
+}
+
+.rootScroll {
+  position: fixed;
+  height: 7rem;
+  width: 100%;
+  background: $main-font;
+  z-index: 99;
+  transition: $main-transition;
+  .burger {
+    display: none;
+  }
+  .container {
+    @include flex(space-between, center);
+    margin: 0 2rem 2rem 2rem;
+    .logo {
+      margin-top: 1rem;
+      a {
+        @include flex(center,center);
+        text-decoration: none;
+        img {
+          height: 5rem;
+          width: 4.5rem;
+          margin-left: 1rem;
+        }
+        span {
+          font-size: 2.2rem;
+          color: $second-font;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .list {
+      margin-top: 1rem;
+      a {
+        text-decoration: none;
+        color: $second-font;
+        font-size: 1.8rem;
+        margin: 0 1rem;
+        transition: $main-transition;
+        &:hover {
+          color: $main-btn;
+        }
+      }
+      .active {
+        color: $main-btn;
+      }
+    }
+    .icons {
+      @include flex(center, center);
+      margin-top: 1rem;
+      position: relative;
+      .ico {
+        font-size: 2.3rem;
+        color: $main-font;
+        svg {
+          color: $second-font;
+          cursor: pointer;
+        }
+      }
+      .userActive {
+        display: none;
+      }
+      .user{
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        right: 3.4rem;
+        width: 15rem;
+        transition: $main-transition;
+        .userData {
+          width: 100%;
+          .loUser {
+            z-index: 999;
+            width: 100%;
+            border: 1px solid rgba(0,0,0,0.2);
+            background: $primary-white;
+            box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2), -7px 7px 10px rgba(0, 0, 0, 0.2);
+            .userCommon {
+              width: 100%;
+              font-size: 1.3rem;
+              border-bottom: 1px solid $main-btn;
+              padding: 1rem 0 .5rem .5rem;
+              font-weight: 800;
+              svg {
+                color: $main-btn;
+                font-size: 1.5rem;
+              }
+            }
+            p {
+              color: $second-font;
+              cursor: pointer;
+              font-size: 1.4rem;
+              transition: $main-transition;
+              margin-top: 1rem;
+              margin-left: 1rem;
+              &:hover {
+                color: $main-btn;
+              }
+            }
+            p:last-of-type {
+              margin-bottom: .5rem;
+            }
+            a {
+              text-decoration: none;
+              svg {
+                color: $second-font;
+                margin-right: 2rem;
+                font-size: 2.2rem;
+                transition: $main-transition;
+                &:hover {
+                  color: $main-btn;
+                }
+              }
+            }
+          }
+        }
+      }
+      .totalQuantity {
+        @include flex(center,center);
+        color: $main-font;
+        font-size: 1.2rem;
+        font-weight: 800;
+        background: $main-btn;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        position: absolute;
+        left: 3.7rem;
+        bottom: 2.1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .root, .rootScroll {
+    .container {
+      @include flex(flex-start, center);
+      margin: 0 1.5rem 0 0;
+      .burger {
+        display: block;
+      }
+      .list {
+        display: none;
+      }
+      .logo {
+        margin-left: 1rem;
+        margin-right: 4rem;
+        a {
+          img {
+            margin: 0;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      .icons {
+        margin-right: 4rem;
+        .user{
+          position: fixed;
+          width: 100vw;
+          height: 50vh;
+          top: 6rem;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .root, .rootScroll {
+    .container {
+      @include flex(flex-start, center);
+      margin: 0 1.5rem 0 0;
+      .burger {
+        display: block;
+      }
+      .list {
+        display: none;
+      }
+      .logo {
+        margin-left: 1rem;
+        margin-right: 4rem;
+        a {
+          img {
+            margin: 0;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      .icons {
+        margin-right: 4rem;
+        .user{
+          position: fixed;
+          width: 100vw;
+          height: 50vh;
+          top: 6rem;
+          right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,276 @@
+@import "../../../../styles/settings";
+
+.root {
+  @include flex(center, center);
+  margin-top: 5rem;
+  max-width: 1715px;
+  .container {
+    @include flex(center,center);
+    flex-wrap: wrap;
+    width: 100%;
+    .faceContent {
+      @include flex(center, center);
+      .img {
+        margin-right: 10rem;
+        width: 100%;
+        max-width: 600px;
+        img {
+          width: 100%;
+        }
+      }
+      .content {
+        width: 100%;
+        color: $second-font;
+        margin-top: 3rem;
+        @include flex(flex-start,center);
+        flex-wrap: wrap;
+        span {
+          text-align: center;
+          color: $main-btn;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          font-weight: 600;
+          width: 100%;
+        }
+        h1 {
+          text-align: center;
+          width: 100%;
+          font-size: 3rem;
+          margin: 1rem 0;
+        }
+        p {
+          text-align: center;
+          width: 100%;
+          font-size: 1.4rem;
+          margin: .5rem;
+        }
+        ul {
+          text-align: center;
+          width: 100%;
+          list-style-position: inside;
+          li {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-left: 2.2rem;
+          }
+        }
+        .btn {
+          width: 100%;
+          @include flex(center,center);
+        }
+      }
+    }
+    .notSure {
+      width: 100%;
+      @include flex(center,center);
+      flex-wrap: wrap;
+      margin-top: 8rem;
+      h3 {
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: $main-btn;
+      }
+      h5 {
+        font-size: 1.8rem;
+      }
+      .notSureContainer {
+        width: 100%;
+        margin: 1.5rem auto;
+        background: $primary-white;
+
+        @include flex(center, flex-start);
+        .notSureItem {
+          @include flex(space-around, center);
+          flex-wrap: wrap;
+          margin: 5rem 5rem 5rem 0;
+          width: 20rem;
+          img {
+            height: 8rem;
+          }
+          h5 {
+            margin: 2rem 0;
+            width: 100%;
+            text-align: center;
+          }
+          p {
+            width: 100%;
+            text-align: center;
+            font-size: 1.4rem;
+            span {
+              font-weight: 800;
+              font-size: 1.6rem;
+            }
+          }
+          .extra {
+            margin-top: .5rem;
+            text-decoration: underline;
+          }
+        }
+        .notSureItem:last-of-type {
+          margin-right: 0;
+        }
+      }
+      h5:last-of-type {
+        width: 100%;
+        text-align: center;
+      }
+      .readySolDesc {
+        margin: 3rem;
+        width: 100%;
+        @include flex(center,center);
+        p {
+          width: 20rem;
+          font-size: 1.4rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .root {
+    margin-top: 2rem;
+    .container {
+      .faceContent {
+        display: block;
+        .img {
+          margin-right: 0;
+          img {
+            width: 100%;
+          }
+        }
+        .content {
+          width: 100%;
+          margin: 2rem 0 1rem 0;
+          @include flex(center,center);
+          h1 {
+            margin-left: 1rem;
+            font-size: 2rem;
+          }
+          span {
+            margin-left: 1rem;
+          }
+          p {
+            margin-left: 1rem;
+            font-size: 1.1rem;
+          }
+          ul {
+            margin-left: 1rem;
+            list-style-position: outside;
+            li {
+              font-size: 1rem;
+              margin-left: 2rem;
+            }
+          }
+          .btn {
+            width: 100%;
+            @include flex(center,center);
+          }
+        }
+      }
+      .notSure {
+        margin: 1rem;
+        h3 {
+          font-size: 2rem;
+          margin: 0 1rem 1rem;
+        }
+        h5 {
+          font-size: 1.4rem;
+        }
+        .notSureContainer {
+          margin: 0;
+          flex-wrap: wrap;
+          .notSureItem {
+            @include flex(center, center);
+            flex-wrap: wrap;
+            margin: 1rem 1rem 5rem;
+            width: 100%;
+            img {
+              height: 6rem;
+            }
+            h5 {
+              margin: 1rem 0;
+            }
+            p {
+              font-size: 1.2rem;
+              span {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+        .readySolDesc {
+          margin: 2rem 1rem;
+          p {
+            width: 100%;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1148px) {
+  .root {
+    margin-top: 2rem;
+    .container {
+      .faceContent {
+        @include flex(center,center);
+        flex-wrap: wrap;
+        .img {
+          margin-right: 0;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .notSure {
+        margin: 1rem;
+        h3 {
+          font-size: 2rem;
+          margin: 0 1rem 1rem;
+        }
+        h5 {
+          font-size: 1.4rem;
+        }
+        .notSureContainer {
+          margin: 0;
+          flex-wrap: wrap;
+          .notSureItem {
+            @include flex(center, center);
+            flex-wrap: wrap;
+            margin: 1rem 1rem 5rem;
+            width: 100%;
+            img {
+              height: 6rem;
+            }
+            h5 {
+              margin: 1rem 0;
+            }
+            p {
+              font-size: 1.2rem;
+              span {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+        .readySolDesc {
+          margin: 2rem 1rem;
+          p {
+            width: 100%;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 771px) and (max-width: 1024px) {
+
+}
+

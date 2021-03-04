@@ -1,0 +1,120 @@
+@import '../../../../styles/settings';
+
+.root {
+  background: $primary;
+  @include flex(center,center);
+  flex-wrap: wrap;
+  .content {
+    width: 23rem;
+    color: white;
+    margin: 20rem 5rem 10rem;
+    span {
+      color: $main-btn;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-left: .5rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 1rem 0;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: .5rem;
+    }
+  }
+  .images {
+    width: 42rem;
+    height: 39rem;
+    position: relative;
+    margin-top: 8rem;
+    img {
+      position: absolute;
+      width: 70%;
+    }
+    img:first-of-type {
+      top: -3rem;
+    }
+    img:nth-of-type(2) {
+      top: 15rem;
+      left: 13rem;
+    }
+    img:nth-of-type(3) {
+      top: 18rem;
+      left: -7rem;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .root {
+    .content {
+      margin: 10rem 1rem 1rem 1rem;
+    }
+    .images {
+      width: 22rem;
+      height: 18rem;
+      margin: 0 1rem;
+      @include flex(center, center);
+      img {
+        position: absolute;
+        width: 15rem;
+      }
+      img:first-of-type {
+        top: 1rem;
+      }
+      img:nth-of-type(2) {
+        display: none;
+      }
+      img:nth-of-type(3) {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 770px) {
+  .root {
+    .content {
+      margin: 10rem 1rem 1rem 1rem;
+    }
+    .images {
+      width: 22rem;
+      height: 18rem;
+      margin: 0 1rem;
+      @include flex(center, center);
+      img {
+        position: absolute;
+        width: 15rem;
+      }
+      img:first-of-type {
+        top: 1rem;
+      }
+      img:nth-of-type(2) {
+        display: none;
+      }
+      img:nth-of-type(3) {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 771px) and (max-width: 1024px) {
+  .root {
+    .images {
+      width: 28rem;
+      height: 26rem;
+      img:first-of-type {
+        top: -1rem;
+      }
+      img:nth-of-type(2) {
+        top: 12rem;
+        left: 9rem;
+      }
+      img:nth-of-type(3) {
+        top: 13rem;
+        left: -5rem;
+      }
+    }
+  }
+}
